@@ -1,0 +1,26 @@
+/* Discover Menu Container */
+.discover_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Spacing between menu items */
+    width: 100%;
+  }
+  
+  /* Discover Menu Item */
+  .discover_item {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0056b3; /* Blue Accent */
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+  }
+  
+  .discover_item:hover {
+    background-color: #0056b3; /* Blue Accent */
+    color: white;
+    text-decoration: none;
+  }
+  

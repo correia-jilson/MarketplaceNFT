@@ -1,0 +1,124 @@
+/* General Card */
+.FollowerTabCard_box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white; /* White Background */
+    border-radius: 2rem;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .FollowerTabCard_box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Rank Badge */
+  .FollowerTabCard_rank {
+    position: absolute;
+    z-index: 1;
+    background-color: #0056b3; /* Blue Accent */
+    color: white;
+    line-height: 0;
+    margin: 1rem;
+    font-size: 0.8rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 2rem;
+    border: 1px solid #0056b3;
+    transition: all 0.3s ease-in;
+  }
+  
+  .FollowerTabCard_rank:hover {
+    background-color: white;
+    color: #0056b3; /* Blue Accent */
+  }
+  
+  /* Background Image */
+  .FollowerTabCard_box_img {
+    grid-column: 1 / -1;
+  }
+  
+  .FollowerTabCard_box_img_img {
+    border-radius: 2rem;
+    width: 100%;
+  }
+  
+  /* Profile Image */
+  .FollowerTabCard_box_profile {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: -2rem;
+    position: relative;
+  }
+  
+  .FollowerTabCard_box_profile_img {
+    border-radius: 50%;
+    padding: 0.5rem;
+    z-index: 2;
+  }
+  
+  .FollowerTabCard_box_profile::before {
+    position: absolute;
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    background-color: white; /* White Background */
+    border-radius: 50%;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Info Section */
+  .FollowerTabCard_box_info {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -1rem;
+    padding: 1rem;
+  }
+  
+  .FollowerTabCard_box_info h4 {
+    font-size: 1rem;
+  }
+  
+  .FollowerTabCard_box_info_following a {
+    background-color: #0056b3; /* Blue Accent */
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    color: white;
+    text-align: center;
+    border: 1px solid #0056b3; /* Blue Accent */
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+  }
+  
+  .FollowerTabCard_box_info_following a:hover {
+    background-color: white;
+    color: #0056b3; /* Blue Accent */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .FollowerTabCard_box {
+      grid-template-columns: 1fr;
+    }
+  
+    .FollowerTabCard_box_img_img {
+      height: 200px;
+    }
+  
+    .FollowerTabCard_box_info {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media screen and (max-width: 425px) {
+    .FollowerTabCard_box_info_following a {
+      padding: 0.5rem 1rem;
+    }
+  }
+  

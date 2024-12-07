@@ -1,0 +1,26 @@
+/* Help Center Menu Container */
+.helpCenterMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Spacing between menu items */
+    width: 100%;
+  }
+  
+  /* Help Center Menu Item */
+  .helpCenterItem {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0056b3; /* Blue Accent */
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+  }
+  
+  .helpCenterItem:hover {
+    background-color: #0056b3; /* Blue Accent */
+    color: white;
+    text-decoration: none;
+  }
+  

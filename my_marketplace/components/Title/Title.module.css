@@ -1,0 +1,49 @@
+.title {
+    width: 100%;
+    background-color: #ffffff; /* White background */
+    padding: 2rem 0;
+  }
+  
+  .title_box {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .title_box h2 {
+    font-size: 2.5rem;
+    color: #007bff; /* Blue accent */
+    margin-bottom: 1rem;
+  }
+  
+  .title_box p {
+    font-size: 1.2rem;
+    color: #333333; /* Dark text */
+    line-height: 1.6;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .title_box {
+      width: 90%;
+    }
+  
+    .title_box h2 {
+      font-size: 2rem;
+    }
+  
+    .title_box p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 425px) {
+    .title_box h2 {
+      font-size: 1.8rem;
+    }
+  
+    .title_box p {
+      font-size: 0.9rem;
+    }
+  }
+  

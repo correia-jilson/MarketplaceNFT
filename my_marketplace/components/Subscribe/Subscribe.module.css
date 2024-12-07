@@ -1,0 +1,126 @@
+.subscribe {
+    width: 100%;
+    background-color: #ffffff; /* White background */
+    padding: 4rem 0;
+  }
+  
+  .subscribe_box {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .subscribe_box_left h2 {
+    font-size: 2.5rem;
+    color: #333333; /* Dark text */
+    margin-bottom: 1rem;
+  }
+  
+  .subscribe_box p {
+    font-size: 1.2rem;
+    color: #666666; /* Subtle text color */
+    margin-bottom: 2rem;
+  }
+  
+  .subscribe_box_left_box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .subscribe_box_left_box small {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333333; /* Dark text */
+  }
+  
+  .subscribe_box_left_box span {
+    background-color: #007bff; /* Blue background */
+    color: #ffffff; /* White text */
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    width: 4rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .subscribe_box_left_input {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    width: 80%;
+    border-radius: 2rem;
+    background-color: #f0f8ff; /* Light blue background */
+    display: flex;
+    align-items: center;
+    border: 1px solid #007bff; /* Blue border */
+  }
+  
+  .subscribe_box_left_input input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 90%;
+    color: #333333; /* Dark text */
+  }
+  
+  .subscribe_box_left_input input::placeholder {
+    color: #666666; /* Subtle text color */
+    font-size: 1rem;
+  }
+  
+  .subscribe_box_left_input_icon {
+    font-size: 1.5rem;
+    color: #007bff; /* Blue icon */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .subscribe_box_left_input_icon:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .subscribe_box_right_image {
+    border-radius: 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .subscribe_box {
+      grid-template-columns: 1fr;
+      width: 90%;
+      gap: 3rem;
+    }
+  
+    .subscribe_box_left h2 {
+      font-size: 2rem;
+    }
+  
+    .subscribe_box_left_input {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .subscribe_box_left h2 {
+      font-size: 1.8rem;
+    }
+  
+    .subscribe_box_left_input {
+      padding: 1rem;
+    }
+  
+    .subscribe_box_left_box small {
+      font-size: 0.9rem;
+    }
+  
+    .subscribe_box_left_box span {
+      font-size: 0.9rem;
+    }
+  }
+  

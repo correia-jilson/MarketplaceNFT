@@ -1,0 +1,37 @@
+.bigNFTSlider_box {
+    margin: 0 auto;
+    width: 80%;
+    padding-block: 8rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+  
+  .bigNFTSlider_box_left {
+    grid-column: 1 / 7;
+    grid-row: 1 / -1;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    height: 90vh;
+  }
+  
+  .bigNFTSlider_box_left h2 {
+    font-size: 3rem;
+    color: #0056b3;
+  }
+  
+  .bigNFTSlider_box_right {
+    grid-column: 6 / -1;
+    grid-row: 1 / -1;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  
+  .bigNFTSlider_box_right_box_img {
+    border-radius: 1rem;
+  }
+  

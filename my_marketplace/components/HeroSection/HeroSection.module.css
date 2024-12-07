@@ -1,0 +1,73 @@
+/* Hero Section */
+.heroSection {
+    width: 80%;
+    margin: 3rem auto;
+    background-color: white; /* White Background */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heroSection_box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  /* Left Section */
+  .heroSection_box_left {
+    padding-right: 6rem;
+  }
+  
+  .heroSection_box_left h1 {
+    font-size: 5rem;
+    line-height: 1.2;
+    color: #0056b3; /* Blue Accent */
+  }
+  
+  .heroSection_box_left p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Right Section */
+  .heroSection_box_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heroImage {
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 55em) {
+    .heroSection_box {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+  
+    .heroSection_box_left {
+      padding-right: 2rem;
+    }
+  
+    .heroSection_box_left h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+  }
+  
+  @media screen and (max-width: 35em) {
+    .heroSection {
+      width: 90%;
+    }
+  
+    .heroSection_box_left p {
+      font-size: 1rem;
+    }
+  }
+  

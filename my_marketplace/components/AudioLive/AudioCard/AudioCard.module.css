@@ -1,0 +1,174 @@
+/* Audio Card Box */
+.audioCard_box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 4rem);
+    gap: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+    border-radius: 2rem;
+    background-color: white; /* White Background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .audioCard_box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Like and Time Section */
+  .audioCard_box_like_time {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0;
+    z-index: 123;
+  }
+  
+  .audioCard_box_like {
+    background-color: #0056b3; /* Blue Accent */
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1.3rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin: 1rem;
+  }
+  
+  .audioCard_box_like_icon,
+  .audioCard_box_like_icon_unlike {
+    font-size: 2rem;
+  }
+  
+  .audioCard_box_time {
+    background-color: #0056b3; /* Blue Accent */
+    padding: 1rem 4.5rem;
+    color: white;
+    transform: skewX(35deg);
+    border-bottom-left-radius: 1rem;
+  }
+  
+  .audioCard_box_like_time_remaing {
+    transform: skewX(-35deg);
+    text-align: center;
+  }
+  
+  .audioCard_box_like_time_remaing small {
+    font-weight: 500;
+  }
+  
+  .audioCard_box_like_time_remaing h5 {
+    font-size: 1.5rem;
+    margin-top: 1.6rem;
+  }
+  
+  /* Music Player Section */
+  .audioCard_box_player {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    display: flex;
+    padding-inline: 3rem;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .audioCard_box_musicPlayer_icon {
+    padding: 1.3rem;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #0056b3; /* Blue Accent */
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Image Section */
+  .audioCard_box_img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+  
+  /* Details Section */
+  .audioCard_box_details {
+    grid-column: 1 / -1;
+    grid-row: 5 / -1;
+    z-index: 123;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f4fa; /* Light Background */
+    padding: 2rem;
+    border-top-right-radius: 2rem;
+  }
+  
+  .audioCard_box_details_info h4 {
+    font-size: 1.1rem;
+  }
+  
+  .audioCard_box_details_info_price {
+    border: 1px solid #0056b3; /* Blue Accent */
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .audioCard_box_details_info_price small {
+    background-color: #0056b3; /* Blue Accent */
+    color: white;
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .audioCard_box_details_info_price p {
+    line-height: 1.2;
+    font-weight: 700;
+    color: #0056b3;
+  }
+  
+  .audioCard_box_details_stock {
+    text-align: end;
+    display: grid;
+  }
+  
+  .audioCard_box_details_stock small {
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 35em) {
+    .audioCard_box_time {
+      padding-inline: 2.5rem;
+    }
+  
+    .audioCard_box_like_time_remaing h5 {
+      font-size: 1rem;
+    }
+  
+    .audioCard_box_details {
+      padding: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 427px) and (max-width: 768px) {
+    .audioCard_box_like_time_remaing h5 {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 770px) and (max-width: 1024px) {
+    .audioCard_box_time {
+      padding: 1rem 2rem;
+    }
+  
+    .audioCard_box_like_time_remaing h5 {
+      font-size: 1rem;
+    }
+  
+    .audioCard_box_details_info h4 {
+      font-size: 1rem;
+    }
+  }
+  

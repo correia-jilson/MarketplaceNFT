@@ -20,8 +20,8 @@ const Notification = () => {
           />
         </div>
         <div className={Style.notification_box_info}>
-          <h4>Shoaib Akhter</h4>
-          <p>Measure action your user...</p>
+          <h4>Hello User</h4>
+          <p>You have one notification...</p>
           <small>3 minutes ago</small>
         </div>
         <span className={Style.notification_box_new}></span>

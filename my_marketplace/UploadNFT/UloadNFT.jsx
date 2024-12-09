@@ -77,7 +77,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT, uploadToPinata }) => {
           <label htmlFor="nft">Item Name</label>
           <input
             type="text"
-            placeholder="shoaib bhai"
+            placeholder="xyz"
             className={formStyle.Form_box_input_userName}
             onChange={(e) => setName(e.target.value)}
           />

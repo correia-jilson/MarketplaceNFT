@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-// INTERNAL IMPORT
+//INTERNAL IMPORT
 import Style from "./Discover.module.css";
 
 const Discover = () => {
@@ -32,13 +32,12 @@ const Discover = () => {
       link: "connectWallet",
     },
   ];
-
   return (
-    <div className={Style.discover_menu}>
+    <div>
       {discover.map((el, i) => (
-        <Link key={i} href={{ pathname: `${el.link}` }}>
-          <a className={Style.discover_item}>{el.name}</a>
-        </Link>
+        <div key={i + 1} className={Style.discover}>
+          <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
+        </div>
       ))}
     </div>
   );

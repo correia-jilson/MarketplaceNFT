@@ -20,19 +20,7 @@ const Slider = () => {
     {
       background: images.creatorbackground5,
       user: images.user5,
-    },
-    {
-      background: images.creatorbackground6,
-      user: images.user6,
-    },
-    {
-      background: images.creatorbackground1,
-      user: images.user1,
-    },
-    {
-      background: images.creatorbackground2,
-      user: images.user2,
-    },
+    }
   ];
   const [width, setWidth] = useState(0);
   const dragSlider = useRef();

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-// INTERNAL IMPORT
+//INTERNAL IMPORT
 import Style from "./HelpCenter.module.css";
 
 const HelpCenter = () => {
@@ -19,7 +19,7 @@ const HelpCenter = () => {
       link: "signUp",
     },
     {
-      name: "Log In",
+      name: "LogIn",
       link: "login",
     },
     {
@@ -27,13 +27,12 @@ const HelpCenter = () => {
       link: "subscription",
     },
   ];
-
   return (
-    <div className={Style.helpCenterMenu}>
+    <div className={Style.box}>
       {helpCenter.map((el, i) => (
-        <Link key={i} href={{ pathname: `${el.link}` }}>
-          <a className={Style.helpCenterItem}>{el.name}</a>
-        </Link>
+        <div className={Style.helpCenter} key={i + 1}>
+          <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
+        </div>
       ))}
     </div>
   );

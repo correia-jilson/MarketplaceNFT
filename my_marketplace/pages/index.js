@@ -55,10 +55,18 @@ const Home = () => {
     <div className={Style.homePage}>
       <HeroSection />
       <Service />
+
+      <Title
+        heading="Featured NFTs"
+        paragraph="The most outstanding nft's"
+      />
+      <Filter />
+      {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />}
+
       <BigNFTSilder />
       <Title
         heading="Audio Collection"
-        paragraph="Discover the most outstanding NFTs in all topics of life."
+        paragraph="The most outstanding nft's"
       />
       <AudioLive />
       {creators.length == 0 ? (
@@ -69,12 +77,7 @@ const Home = () => {
 
       <Slider />
       <Collection />
-      <Title
-        heading="Featured NFTs"
-        paragraph="Discover the most outstanding NFTs in all topics of life."
-      />
-      <Filter />
-      {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />}
+      
 
       <Title
         heading="Browse by category"
@@ -83,7 +86,6 @@ const Home = () => {
       <Category />
       <Subscribe />
       <Brand />
-      <Video />
     </div>
   );
 };

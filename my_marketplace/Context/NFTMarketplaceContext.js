@@ -112,8 +112,8 @@ export const NFTMarketplaceProvider = ({ children }) => {
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
           data: formData,
           headers: {
-            pinata_api_key: `45e532f7e3af48d50498`,
-            pinata_secret_api_key: `8215ec1869eac0a7b56c594289fff2070bac81176cc6c0f53719d3bc58e11bd1`,
+            pinata_api_key: `0c87649995be5c39f859`,
+            pinata_secret_api_key: `c25b65817ee96d9163f26cfbea46428f5e418b0f2ab0c2d6a839225a1ef02681`,
             "Content-Type": "multipart/form-data",
           },
         });
@@ -143,8 +143,8 @@ export const NFTMarketplaceProvider = ({ children }) => {
         url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
         data: data,
         headers: {
-          pinata_api_key: `45e532f7e3af48d50498`,
-          pinata_secret_api_key: `8215ec1869eac0a7b56c594289fff2070bac81176cc6c0f53719d3bc58e11bd1`,
+          pinata_api_key: `0c87649995be5c39f859`,
+          pinata_secret_api_key: `c25b65817ee96d9163f26cfbea46428f5e418b0f2ab0c2d6a839225a1ef02681`,
           "Content-Type": "application/json",
         },
       });
@@ -161,14 +161,45 @@ export const NFTMarketplaceProvider = ({ children }) => {
   };
 
   //--- createSale FUNCTION
+  // const createSale = async (url, formInputPrice, isReselling, id) => {
+  //   try {
+  //     const price = ethers.utils.parseUnits(formInputPrice, "ether");
+
+  //     const contract = await connectingWithSmartContract();
+
+  //     const listingPrice = await contract.getListingPrice();
+
+  //     const transaction = !isReselling
+  //       ? await contract.createToken(url, price, {
+  //           value: listingPrice.toString(),
+  //         })
+  //       : await contract.resellToken(id, price, {
+  //           value: listingPrice.toString(),
+  //         });
+
+  //     await transaction.wait();
+  //     console.log(transaction);
+  //   } catch (error) {
+  //     setError("error while creating sale");
+  //     setOpenError(true);
+  //     console.log(error);
+  //   }
+  // };
+
+  
   const createSale = async (url, formInputPrice, isReselling, id) => {
     try {
+      // Log inputs for debugging
+      console.log("Creating Sale with URL:", url);
+      console.log("Price:", formInputPrice);
       const price = ethers.utils.parseUnits(formInputPrice, "ether");
-
+  
+      // Connect to contract
       const contract = await connectingWithSmartContract();
-
       const listingPrice = await contract.getListingPrice();
-
+      console.log("Listing Price:", listingPrice.toString());
+  
+      // Handle transaction logic
       const transaction = !isReselling
         ? await contract.createToken(url, price, {
             value: listingPrice.toString(),
@@ -176,16 +207,17 @@ export const NFTMarketplaceProvider = ({ children }) => {
         : await contract.resellToken(id, price, {
             value: listingPrice.toString(),
           });
-
-      await transaction.wait();
-      console.log(transaction);
+  
+      console.log("Transaction:", transaction);
+      await transaction.wait(); // Wait for the transaction to be confirmed
+      console.log("Transaction confirmed:", transaction);
     } catch (error) {
-      setError("error while creating sale");
+      console.error("Error while creating sale:", error);
+      setError("Error while creating sale");
       setOpenError(true);
-      console.log(error);
     }
   };
-
+  
   //--FETCHNFTS FUNCTION
 
   const fetchNFTs = async () => {

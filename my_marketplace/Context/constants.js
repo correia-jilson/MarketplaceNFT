@@ -3,7 +3,7 @@ import nftMarketplace from "./NFTMarketplace.json";
 //NFT MARKETPLACE
 //--------POLYGON AMOY TESTNET
 export const NFTMarketplaceAddress =
-  "0x620C57A2C821b4680090393891cA49Bd715c4813";
+  "0x7BA0E095D059fB38615C3B9eFe1b22EE524F5f55";
 //--------LOCALHOST
 // export const NFTMarketplaceAddress =
 //   "0x5FbDB2315678afecb367f032d93F642f64180aa3";
@@ -19,7 +19,7 @@ const networks = {
       symbol: "MATIC",
       decimals: 18,
     },
-    rpcUrls: ["https://rpc-amoy.polygon.technology/"],
+    rpcUrls: ["https://virtual.polygon-amoy.rpc.tenderly.co/26d85b87-1045-4d75-ba25-c4a282065eac"],
     blockExplorerUrls: ["https://www.oklink.com/amoy"],
   },
   polygon_mumbai: {

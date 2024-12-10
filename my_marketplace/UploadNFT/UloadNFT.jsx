@@ -57,7 +57,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT, uploadToPinata }) => {
   return (
     <div className={Style.upload}>
       <DropZone
-        title="JPG, PNG, WEBM , MAX 100MB"
+        title="JPG, PNG, MAX 100MB"
         heading="Drag & drop file"
         subHeading="or Browse media on your device"
         name={name}
@@ -97,11 +97,6 @@ const UloadNFT = ({ uploadToIPFS, createNFT, uploadToPinata }) => {
             />
           </div>
 
-          <p className={Style.upload_box_input_para}>
-            Ciscrypt will include a link to this URL on this item's detail page,
-            so that users can click to learn more about it. You are welcome to
-            link to your own webpage with more details.
-          </p>
         </div>
 
         <div className={formStyle.Form_box_input}>
@@ -111,12 +106,12 @@ const UloadNFT = ({ uploadToIPFS, createNFT, uploadToPinata }) => {
             id=""
             cols="30"
             rows="6"
-            placeholder="something about yourself in few words"
+            placeholder="describe the nft in few words"
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <p>
             The description will be included on the item's detail page
-            underneath its image. Markdown syntax is supported.
+            underneath its image.
           </p>
         </div>
 
@@ -221,11 +216,6 @@ const UloadNFT = ({ uploadToIPFS, createNFT, uploadToPinata }) => {
                 image,
                 description,
                 router
-                // website,
-                // royalties,
-                // fileSize,
-                // category,
-                // properties
               )
             }
             classStyle={Style.upload_box_btn_style}
